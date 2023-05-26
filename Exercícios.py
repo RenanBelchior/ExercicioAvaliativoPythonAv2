@@ -85,8 +85,64 @@ print("Dicionário de backup: ")
 print(dicionarioBackup)
 
 --------------------------------------------------------------------------------
+#3. (Prog. Orientado Objetos) Elabore um programa em Python que Crie a classe “Automóvel” e
+#derive (Herança) as 4 subclasses abaixo. Seu programa deve ter no mínimo 2 atributos e no
+#mínimo 2 métodos (e garantir o Polimorfismo)
+
+class Automovel():
+    def __init__(self,marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+    
+class Carro(Automovel):
+    def __init__(self, marca, modelo):
+        super().__init__(marca, modelo)
+    
+    def rodas(self):
+        print("Possui 4 rodas")
+    
+    def tracao(self):
+        print("Tração 4x2 traseiro")
 
 
+class Caminhao(Automovel):
+    def __init__(self, marca, modelo):
+        super().__init__(marca, modelo)
+    
+    def rodas(self):
+        print("Possui 10 rodas")
+    
+    def tracao(self):
+        print("Tração 10x4 traseiro")
+
+
+class Caminhonete(Automovel):
+    def __init__(self, marca, modelo):
+        super().__init__(marca, modelo)
+    
+    def rodas(self):
+        print("Possui 6 rodas")
+    
+    def tracao(self):
+        print("Tração 6x4 traseiro")
+
+
+class Moto(Automovel):
+    def __init__(self, marca, modelo):
+        super().__init__(marca, modelo)
+    
+    def rodas(self):
+        print("Possui 2 rodas")
+    
+    def tracao(self):
+        print("Tração 2x1 traseira")
+
+Automovel = Moto("Harley Davidson", "Low Rider S")
+print(Automovel.marca, Automovel.modelo)
+Automovel.rodas()
+Automovel.tracao()
+
+--------------------------------------------------------------------------------
 
 
 
