@@ -143,13 +143,51 @@ Automovel.rodas()
 Automovel.tracao()
 
 --------------------------------------------------------------------------------
+#4. (Prog. Orientado Objetos) Elabore um programa em Python que Crie a classe “Produto” e derive
+#(Herança) as 3 subclasses abaixo. Seu programa deve ter no mínimo 3 atributos e no mínimo 2
+#métodos (e garantir o Polimorfismo). O programa deve ter um menu que escolha qual classe o
+#usuário quer instanciar
+
+class Produto(object):
+    def __init__(self, nome, autor, ano):
+        self.nome = nome
+        self.autor = autor
+        self.ano = ano
+    
+class Livro(Produto):
+    def __init__(self, nome, autor, ano):
+        super().__init__(nome, autor, ano)
+    
+    def Ler(self):
+        print("lendo um livro")
+    
+    def Estado(self):
+        print("Na poltrona da sala")
 
 
+class Cd(Produto):
+    def __init__(self, nome, autor, ano):
+        super().__init__(nome, autor, ano)
+    
+    def Ouvir(self):
+        print("Ouvindo um CD")
+    
+    def Estado(self):
+        print("Cadeira da varanda")
 
 
+class DVD(Produto):
+    def __init__(self, nome, autor, ano):
+        super().__init__(nome, autor, ano)
+    
+    def Assistir(self):
+        print("Vendo um DVD")
+    
+    def Estado(self):
+        print("No sofá da sala")
 
 
-
-
-
-
+Produto = DVD("Interestelar", "Hans Zimmer", 2015)
+print(Produto.nome, Produto.autor, Produto.ano)
+Produto.Assistir()
+Produto.Estado()
