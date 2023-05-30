@@ -94,6 +94,12 @@ class Automovel():
         self.marca = marca
         self.modelo = modelo
     
+    def rodas(self, qtdRodas):
+        self.qtdRodas = qtdRodas
+    
+    def tracao(self, tracao):
+        self.tracao = tracao
+    
 class Carro(Automovel):
     def __init__(self, marca, modelo):
         super().__init__(marca, modelo)
